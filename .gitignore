@@ -1,0 +1,16 @@
+# Secrets
+.env
+
+# Python
+venv
+
+# DBT
+target/
+dbt_packages/
+logs/
+.user.yml
+
+# VSCode
+.vscode/*
+!.vscode/extensions.json
+

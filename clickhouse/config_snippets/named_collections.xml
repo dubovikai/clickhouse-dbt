@@ -1,0 +1,11 @@
+<clickhouse>
+    <named_collections>
+        <postgres_creds>
+            <host>...</host>
+            <database>...</database>
+            <port>...</port>
+            <user>...</user>
+            <password>...</password>
+        </postgres_creds>
+    </named_collections>
+</clickhouse>

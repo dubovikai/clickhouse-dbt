@@ -1,0 +1,35 @@
+name: 'scrapers_dwh'
+version: '1.0.0'
+
+profile: 'scrapers_dwh'
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  scrapers_dwh:
+    youtube_comments:
+      schema: youtube_comments
+      materialized: view
+
+seeds:
+  scrapers_dwh:
+    schema: seeds
+
+snapshots:
+  scrapers_dwh:
+    target_schema: dbt_snapshots
+
+data_tests:
+  store_failures: true
+
+flags:
+  send_anonymous_usage_stats: false

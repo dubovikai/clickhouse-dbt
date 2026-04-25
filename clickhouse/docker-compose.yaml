@@ -1,0 +1,10 @@
+services:
+  clickhouse:
+    image: clickhouse/clickhouse-server:latest
+    container_name: clickhouse-server
+    restart: unless-stopped
+    ports:
+      - "8123:8123"
+    volumes:
+      - ./config.xml:/etc/clickhouse-server/config.d/docker.xml
+      - ./users.xml:/etc/clickhouse-server/users.d/docker.xml
