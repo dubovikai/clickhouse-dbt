@@ -27,7 +27,7 @@
     {% set cleanup_query %}
 
         WITH models_to_drop AS (
-            {% for schema, tables in current_models.items() if schema in [...] %} --!!!! REPLACE WITH SCHEMAS TO CLEANUP
+            {% for schema, tables in current_models.items() if schema in ['default'] %} --!!!! REPLACE WITH SCHEMAS TO CLEANUP
                 {% if not loop.first %} UNION ALL {% endif %}
                 SELECT
                     database,
